@@ -1,0 +1,290 @@
+[gd_scene load_steps=14 format=3 uid="uid://dx7g5kvtirkn"]
+
+[ext_resource type="Script" uid="uid://bbsywbgrfekfw" path="res://scenes/lvl_1.gd" id="1_hp87r"]
+[ext_resource type="Texture2D" uid="uid://c7srnumwo8kuc" path="res://images/Base Head.png" id="2_6j3wd"]
+[ext_resource type="Texture2D" uid="uid://dqghthv86nv2d" path="res://images/Full Setup 1.png" id="2_hp87r"]
+[ext_resource type="Texture2D" uid="uid://bced7ybii85re" path="res://images/Blue Flower.png" id="3_hp87r"]
+[ext_resource type="Texture2D" uid="uid://jfv1uvsisgaw" path="res://images/Green Flower.png" id="4_mvjca"]
+[ext_resource type="Texture2D" uid="uid://bhfi3ppqo2ute" path="res://images/Orange Flower.png" id="5_u7exc"]
+[ext_resource type="Texture2D" uid="uid://7sjhbu78bkty" path="res://images/Text Box.png" id="6_02ush"]
+[ext_resource type="FontFile" uid="uid://f04uqx31flkh" path="res://fonts/Electrolize,Goldman/Goldman/Goldman-Bold.ttf" id="8_mvjca"]
+[ext_resource type="FontFile" uid="uid://d3ip2iqqvfocd" path="res://fonts/Electrolize,Goldman/Electrolize/Electrolize-Regular.ttf" id="9_u7exc"]
+
+[sub_resource type="Animation" id="Animation_mvjca"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_hp87r"]
+resource_name = "lvl1_intro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimationPlayer/BaseHead:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1275.9999, 373), Vector2(572, 373)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimationPlayer/BlueFlowerOn:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1276, 373), Vector2(571.00006, 376.00003)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimationPlayer/GreenFlowerOn:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1276, 373), Vector2(571, 376)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimationPlayer/OrangeFlowerOn:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1276, 373), Vector2(571, 376)]
+}
+
+[sub_resource type="Animation" id="Animation_u7exc"]
+resource_name = "lvl1_outro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimationPlayer/OrangeFlowerOn:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571, 376), Vector2(-126.170166, 376)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimationPlayer/GreenFlowerOn:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571, 376), Vector2(-126.170105, 376)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimationPlayer/BlueFlowerOn:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571.00006, 376.00003), Vector2(-126.170044, 376)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimationPlayer/BaseHead:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(572, 373), Vector2(-125.170166, 376)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_02ush"]
+_data = {
+&"RESET": SubResource("Animation_mvjca"),
+&"lvl1_intro": SubResource("Animation_hp87r"),
+&"lvl1_outro": SubResource("Animation_u7exc")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_hp87r")
+
+[node name="FullSetup1" type="Sprite2D" parent="."]
+position = Vector2(576, 324.00003)
+scale = Vector2(0.9, 0.90000004)
+texture = ExtResource("2_hp87r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../TextBox")
+libraries = {
+&"": SubResource("AnimationLibrary_02ush")
+}
+
+[node name="BaseHead" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(572, 373)
+scale = Vector2(0.425532, 0.42553198)
+texture = ExtResource("2_6j3wd")
+
+[node name="BlueFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(571.00006, 376.00003)
+scale = Vector2(0.427, 0.427)
+texture = ExtResource("3_hp87r")
+
+[node name="GreenFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(571, 376)
+scale = Vector2(0.427, 0.427)
+texture = ExtResource("4_mvjca")
+
+[node name="OrangeFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(571, 376)
+scale = Vector2(0.42664224, 0.42664215)
+texture = ExtResource("5_u7exc")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 151.0
+offset_top = 33.0
+offset_right = 307.0
+offset_bottom = 178.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 494.0
+offset_top = 33.0
+offset_right = 650.0
+offset_bottom = 178.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 863.0
+offset_top = 33.0
+offset_right = 1019.0
+offset_bottom = 178.0
+metadata/_edit_use_anchors_ = true
+
+[node name="GreenFlowerBox" type="Sprite2D" parent="."]
+position = Vector2(230.99998, 104.99999)
+scale = Vector2(0.3884615, 0.3884615)
+texture = ExtResource("4_mvjca")
+
+[node name="BlueFlowerBox" type="Sprite2D" parent="."]
+position = Vector2(942, 108)
+scale = Vector2(0.388, 0.388)
+texture = ExtResource("3_hp87r")
+
+[node name="OrangeFlowerBox" type="Sprite2D" parent="."]
+position = Vector2(574, 105)
+scale = Vector2(0.388, 0.388)
+texture = ExtResource("5_u7exc")
+
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(749, 251)
+scale = Vector2(0.4552981, 0.45529804)
+texture = ExtResource("6_02ush")
+
+[node name="GreenFlowerText" type="Sprite2D" parent="."]
+position = Vector2(757.8, 245.70999)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("4_mvjca")
+
+[node name="BlueFlowerText" type="Sprite2D" parent="."]
+position = Vector2(757.80005, 245.70999)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_hp87r")
+
+[node name="OrangeFlowerText" type="Sprite2D" parent="."]
+position = Vector2(757.8, 245.70999)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("5_u7exc")
+
+[node name="Status1" type="Label" parent="."]
+offset_left = 457.0
+offset_top = 213.00002
+offset_right = 687.0
+offset_bottom = 271.0
+rotation = -0.19896753
+theme_override_colors/font_color = Color(0.90576994, 0, 0.22666997, 1)
+theme_override_font_sizes/font_size = 40
+text = "GAME OVER"
+metadata/_edit_use_anchors_ = true
+
+[node name="Lives" type="Label" parent="."]
+offset_left = 967.0
+offset_top = 560.0
+offset_right = 981.0
+offset_bottom = 589.0
+theme_override_font_sizes/font_size = 20
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Lives2" type="Label" parent="."]
+offset_left = 884.0
+offset_top = 562.0
+offset_right = 952.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("8_mvjca")
+theme_override_font_sizes/font_size = 20
+text = "Lives:"
+metadata/_edit_use_anchors_ = true
+
+[node name="DemoLeft" type="Label" parent="."]
+offset_left = 293.0
+offset_top = 560.0
+offset_right = 333.0
+offset_bottom = 588.0
+theme_override_font_sizes/font_size = 20
+text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="DemoLeft2" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 562.0
+offset_right = 287.0
+offset_bottom = 586.0
+theme_override_fonts/font = ExtResource("8_mvjca")
+theme_override_font_sizes/font_size = 20
+text = "Demogorgons Left:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Hawkins" type="Label" parent="."]
+offset_left = 499.0
+offset_top = 559.0
+offset_right = 655.0
+offset_bottom = 598.0
+theme_override_fonts/font = ExtResource("8_mvjca")
+theme_override_font_sizes/font_size = 32
+text = "Hawkins"
+
+[node name="Level" type="Label" parent="."]
+offset_left = 506.0
+offset_top = 493.0
+offset_right = 643.0
+offset_bottom = 541.0
+theme_override_fonts/font = ExtResource("9_u7exc")
+theme_override_font_sizes/font_size = 40
+text = "Level 1"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
