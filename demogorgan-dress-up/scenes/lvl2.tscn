@@ -1,10 +1,508 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2b33gk8skdjt"]
+[gd_scene load_steps=19 format=3 uid="uid://d2b33gk8skdjt"]
 
+[ext_resource type="Script" uid="uid://duvr5r42qocf2" path="res://scenes/lvl_2.gd" id="1_8yxcp"]
 [ext_resource type="Texture2D" uid="uid://dqghthv86nv2d" path="res://images/Full Setup 1.png" id="1_yxjv1"]
+[ext_resource type="Texture2D" uid="uid://c7srnumwo8kuc" path="res://images/Base Head.png" id="2_kpy5e"]
+[ext_resource type="Texture2D" uid="uid://dcgqorvysrcsv" path="res://images/Black Flower Head.png" id="3_8yxcp"]
+[ext_resource type="Texture2D" uid="uid://bl11740xrepgj" path="res://images/Silver Flower Head.png" id="4_ldvkq"]
+[ext_resource type="Texture2D" uid="uid://bced7ybii85re" path="res://images/Blue Flower.png" id="5_3jqp1"]
+[ext_resource type="Texture2D" uid="uid://jfv1uvsisgaw" path="res://images/Green Flower.png" id="6_wxq22"]
+[ext_resource type="Texture2D" uid="uid://bhfi3ppqo2ute" path="res://images/Orange Flower.png" id="7_86tbu"]
+[ext_resource type="Texture2D" uid="uid://clxtys0ut7b54" path="res://images/Black Petal.png" id="8_y266n"]
+[ext_resource type="Texture2D" uid="uid://drg1f8o4y7p5u" path="res://images/Regular Flower Petal.png" id="9_datw2"]
+[ext_resource type="Texture2D" uid="uid://bwe6iblymo2m4" path="res://images/Silver Petal.png" id="10_rhyen"]
+[ext_resource type="Texture2D" uid="uid://7sjhbu78bkty" path="res://images/Text Box.png" id="11_ybwc6"]
+[ext_resource type="FontFile" uid="uid://f04uqx31flkh" path="res://fonts/Electrolize,Goldman/Goldman/Goldman-Bold.ttf" id="12_iyd8c"]
+[ext_resource type="FontFile" uid="uid://d3ip2iqqvfocd" path="res://fonts/Electrolize,Goldman/Electrolize/Electrolize-Regular.ttf" id="13_nn67r"]
+
+[sub_resource type="Animation" id="Animation_3jqp1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/BaseHead:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(572, 373)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/BlackFlowerHead:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(572, 373)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/SilverFlowerHead:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(572, 373)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/BlueFlowerOn:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(571.00006, 376.00003)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/GreenFlowerOn:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(571, 376)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/OrangeFlowerOn:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(571, 376)]
+}
+
+[sub_resource type="Animation" id="Animation_ldvkq"]
+resource_name = "lvl2_intro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/BaseHead:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1275.8298, 373), Vector2(572, 373)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/BlackFlowerHead:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1275.8298, 373), Vector2(572, 373)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/SilverFlowerHead:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1275.8298, 373), Vector2(572, 373)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/BlueFlowerOn:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1274.8298, 373), Vector2(571.00006, 376.00003)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/GreenFlowerOn:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1274.8298, 373), Vector2(571, 376)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/OrangeFlowerOn:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1274.8298, 373), Vector2(571, 376)]
+}
+
+[sub_resource type="Animation" id="Animation_wxq22"]
+resource_name = "lvl2_outro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/BaseHead:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(572, 373), Vector2(-120.17018, 373)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/BlackFlowerHead:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(572, 373), Vector2(-120.17018, 373)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/SilverFlowerHead:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(572, 373), Vector2(-120.17012, 373)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/BlueFlowerOn:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571.00006, 376.00003), Vector2(-121.17006, 373)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/GreenFlowerOn:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571, 376), Vector2(-121.17012, 373)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/OrangeFlowerOn:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571, 376), Vector2(-121.17018, 373)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_86tbu"]
+_data = {
+&"RESET": SubResource("Animation_3jqp1"),
+&"lvl2_intro": SubResource("Animation_ldvkq"),
+&"lvl2_outro": SubResource("Animation_wxq22")
+}
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_8yxcp")
 
 [node name="FullSetup1" type="Sprite2D" parent="."]
-position = Vector2(575.99994, 323.99997)
-scale = Vector2(0.8999998, 0.9)
+position = Vector2(576, 324.00003)
+scale = Vector2(0.9, 0.90000004)
 texture = ExtResource("1_yxjv1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_86tbu")
+}
+
+[node name="BaseHead" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(572, 373)
+scale = Vector2(0.425532, 0.42553198)
+texture = ExtResource("2_kpy5e")
+
+[node name="BlackFlowerHead" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(572, 373)
+scale = Vector2(0.42442372, 0.42442375)
+texture = ExtResource("3_8yxcp")
+
+[node name="SilverFlowerHead" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(572, 373)
+scale = Vector2(0.424, 0.424)
+texture = ExtResource("4_ldvkq")
+
+[node name="BlueFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(571.00006, 376.00003)
+scale = Vector2(0.427, 0.427)
+texture = ExtResource("5_3jqp1")
+
+[node name="GreenFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(571, 376)
+scale = Vector2(0.427, 0.427)
+texture = ExtResource("6_wxq22")
+
+[node name="OrangeFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(571, 376)
+scale = Vector2(0.42664224, 0.42664215)
+texture = ExtResource("7_86tbu")
+
+[node name="Button1-2" type="Button" parent="."]
+offset_left = 151.0
+offset_top = 33.0
+offset_right = 307.0
+offset_bottom = 178.0
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 151.0
+offset_top = 33.0
+offset_right = 307.0
+offset_bottom = 178.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2-2" type="Button" parent="."]
+offset_left = 494.0
+offset_top = 33.0
+offset_right = 650.0
+offset_bottom = 178.0
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 494.0
+offset_top = 33.0
+offset_right = 650.0
+offset_bottom = 178.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3-2" type="Button" parent="."]
+offset_left = 863.0
+offset_top = 33.0
+offset_right = 1019.0
+offset_bottom = 178.0
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 863.0
+offset_top = 33.0
+offset_right = 1019.0
+offset_bottom = 178.0
+metadata/_edit_use_anchors_ = true
+
+[node name="GreenFlowerBox" type="Sprite2D" parent="."]
+position = Vector2(230.99998, 104.99999)
+scale = Vector2(0.3884615, 0.3884615)
+texture = ExtResource("6_wxq22")
+
+[node name="BlueFlowerBox" type="Sprite2D" parent="."]
+position = Vector2(942, 108)
+scale = Vector2(0.388, 0.388)
+texture = ExtResource("5_3jqp1")
+
+[node name="OrangeFlowerBox" type="Sprite2D" parent="."]
+position = Vector2(574, 105)
+scale = Vector2(0.388, 0.388)
+texture = ExtResource("7_86tbu")
+
+[node name="BlackPetalBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(228, 104.99997)
+scale = Vector2(0.572, 0.572)
+texture = ExtResource("8_y266n")
+
+[node name="RegularFlowerPetalBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(575, 102.99994)
+scale = Vector2(0.572, 0.572)
+texture = ExtResource("9_datw2")
+
+[node name="SilverPetalBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(942.00006, 102.99999)
+scale = Vector2(0.572, 0.572)
+texture = ExtResource("10_rhyen")
+
+[node name="TextBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(749, 251)
+scale = Vector2(0.4552981, 0.45529804)
+texture = ExtResource("11_ybwc6")
+
+[node name="GreenFlowerText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(720, 245)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("6_wxq22")
+
+[node name="BlueFlowerText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(720, 245)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("5_3jqp1")
+
+[node name="OrangeFlowerText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(720, 245)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("7_86tbu")
+
+[node name="BlackPetalText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(810, 245)
+scale = Vector2(0.441, 0.441)
+texture = ExtResource("8_y266n")
+
+[node name="RegularFlowerPetalText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(810, 245)
+scale = Vector2(0.441, 0.441)
+texture = ExtResource("9_datw2")
+
+[node name="SilverPetalText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(810, 245)
+scale = Vector2(0.44092473, 0.44092473)
+texture = ExtResource("10_rhyen")
+
+[node name="Status1" type="Label" parent="."]
+visible = false
+offset_left = 457.0
+offset_top = 213.00002
+offset_right = 687.0
+offset_bottom = 271.0
+rotation = -0.19896753
+theme_override_colors/font_color = Color(0.90576994, 0, 0.22666997, 1)
+theme_override_font_sizes/font_size = 40
+text = "GAME OVER"
+metadata/_edit_use_anchors_ = true
+
+[node name="Lives" type="Label" parent="."]
+offset_left = 967.0
+offset_top = 560.0
+offset_right = 981.0
+offset_bottom = 589.0
+theme_override_font_sizes/font_size = 20
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Lives2" type="Label" parent="."]
+offset_left = 884.0
+offset_top = 562.0
+offset_right = 952.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("12_iyd8c")
+theme_override_font_sizes/font_size = 20
+text = "Lives:"
+metadata/_edit_use_anchors_ = true
+
+[node name="DemoLeft" type="Label" parent="."]
+offset_left = 293.0
+offset_top = 560.0
+offset_right = 333.0
+offset_bottom = 588.0
+theme_override_font_sizes/font_size = 20
+text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="DemoLeft2" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 562.0
+offset_right = 287.0
+offset_bottom = 586.0
+theme_override_fonts/font = ExtResource("12_iyd8c")
+theme_override_font_sizes/font_size = 20
+text = "Demogorgons Left:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Hawkins" type="Label" parent="."]
+offset_left = 431.0
+offset_top = 557.0
+offset_right = 698.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("12_iyd8c")
+theme_override_font_sizes/font_size = 32
+text = "UPSIDE DOWN"
+
+[node name="lvl2" type="Label" parent="."]
+offset_left = 506.0
+offset_top = 493.0
+offset_right = 643.0
+offset_bottom = 541.0
+theme_override_fonts/font = ExtResource("13_nn67r")
+theme_override_font_sizes/font_size = 40
+text = "Level 2"
+horizontal_alignment = 1
+
+[node name="Timer" type="Label" parent="."]
+offset_left = 96.0
+offset_top = -1.0
+offset_right = 115.0
+offset_bottom = 22.0
+text = "60"
+
+[node name="Time" type="Label" parent="."]
+offset_left = 4.0
+offset_right = 94.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("12_iyd8c")
+text = "Time Left:"
+
+[connection signal="pressed" from="Button1-2" to="." method="_on_button_1_2_pressed"]
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2-2" to="." method="_on_button_2_2_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3-2" to="." method="_on_button_3_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

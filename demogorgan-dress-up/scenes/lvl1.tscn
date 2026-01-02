@@ -139,25 +139,25 @@ libraries = {
 }
 
 [node name="BaseHead" type="Sprite2D" parent="AnimationPlayer"]
-position = Vector2(572, 373)
+position = Vector2(1275.9999, 373)
 scale = Vector2(0.425532, 0.42553198)
 texture = ExtResource("2_6j3wd")
 
 [node name="BlueFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
 visible = false
-position = Vector2(571.00006, 376.00003)
+position = Vector2(1276, 373)
 scale = Vector2(0.427, 0.427)
 texture = ExtResource("3_hp87r")
 
 [node name="GreenFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
 visible = false
-position = Vector2(571, 376)
+position = Vector2(1276, 373)
 scale = Vector2(0.427, 0.427)
 texture = ExtResource("4_mvjca")
 
 [node name="OrangeFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
 visible = false
-position = Vector2(571, 376)
+position = Vector2(1276, 373)
 scale = Vector2(0.42664224, 0.42664215)
 texture = ExtResource("5_u7exc")
 
@@ -273,7 +273,7 @@ offset_right = 655.0
 offset_bottom = 598.0
 theme_override_fonts/font = ExtResource("8_mvjca")
 theme_override_font_sizes/font_size = 32
-text = "Hawkins"
+text = "HAWKINS"
 
 [node name="Level" type="Label" parent="."]
 offset_left = 506.0
@@ -284,6 +284,20 @@ theme_override_fonts/font = ExtResource("9_u7exc")
 theme_override_font_sizes/font_size = 40
 text = "Level 1"
 horizontal_alignment = 1
+
+[node name="Timer" type="Label" parent="."]
+offset_left = 96.0
+offset_top = -1.0
+offset_right = 115.0
+offset_bottom = 22.0
+text = "60"
+
+[node name="Time" type="Label" parent="."]
+offset_left = 4.0
+offset_right = 94.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_mvjca")
+text = "Time Left:"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -4,6 +4,8 @@ var counter = 0
 var current_order = -1
 var life = 3
 var num = 4
+var time_left =  40
+var timer_running = true
 
 
 func _ready() -> void:
@@ -25,6 +27,21 @@ func _ready() -> void:
 	$Button3.disabled = false
 	choose_random_order()
 	
+func _process(delta):
+	if timer_running:
+		time_left -= delta
+		if time_left <= 0:
+			timer_running = false
+			time_left = 0
+			time_up()
+	$Timer.text = str(int(time_left))
+
+func time_up():
+	$Status1.visible = true
+	await get_tree().create_timer(1).timeout
+	get_tree().reload_current_scene()
+
+
 func game1_logic():
 	if counter == 0:
 		$Button.disabled = false
