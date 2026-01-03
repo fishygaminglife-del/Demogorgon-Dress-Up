@@ -17,9 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://7sjhbu78bkty" path="res://images/Text Box.png" id="15_lqph3"]
 [ext_resource type="FontFile" uid="uid://f04uqx31flkh" path="res://fonts/Electrolize,Goldman/Goldman/Goldman-Bold.ttf" id="16_xvo1i"]
 [ext_resource type="FontFile" uid="uid://d3ip2iqqvfocd" path="res://fonts/Electrolize,Goldman/Electrolize/Electrolize-Regular.ttf" id="17_p1ayf"]
-[ext_resource type="Texture2D" uid="uid://dqgu227ho4y4o" path="res://images/Pause Button.png" id="18_egiqg"]
-[ext_resource type="Texture2D" uid="uid://bws6cxxe1cxx5" path="res://images/Play Button.png" id="19_n7evg"]
-[ext_resource type="Texture2D" uid="uid://cr1yyuloy77x0" path="res://images/Box.png" id="20_78xwv"]
+[ext_resource type="AudioStream" uid="uid://dse2vhxh4i3w2" path="res://Audiomusic/DemoHappy3.mp3" id="18_egiqg"]
+[ext_resource type="AudioStream" uid="uid://cbsk7tlqs4qn3" path="res://Audiomusic/DemoMad2_1.mp3" id="19_n7evg"]
+[ext_resource type="AudioStream" uid="uid://1j68278tigow" path="res://Audiomusic/DemoMad_1.mp3" id="20_78xwv"]
 
 [sub_resource type="Animation" id="Animation_ysayj"]
 length = 0.001
@@ -584,36 +584,22 @@ text = "Time Left:"
 [node name="Lvl_stat" type="Label" parent="."]
 offset_left = 407.0
 offset_top = 194.0
-offset_right = 798.0
+offset_right = 804.0
 offset_bottom = 314.0
 theme_override_colors/font_color = Color(0.5137255, 0.09019608, 0.09019608, 1)
 theme_override_fonts/font = ExtResource("16_xvo1i")
 theme_override_font_sizes/font_size = 100
 text = "Level 3"
 
-[node name="Box" type="Sprite2D" parent="."]
-position = Vector2(1103, 41)
-texture = ExtResource("20_78xwv")
+[node name="Demo3Happy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_egiqg")
 
-[node name="Pause" type="Button" parent="."]
-offset_left = 1067.0
-offset_top = 6.0
-offset_right = 1137.0
-offset_bottom = 76.0
-theme_override_fonts/font = ExtResource("17_p1ayf")
-theme_override_font_sizes/font_size = 20
-icon = ExtResource("18_egiqg")
-icon_alignment = 1
+[node name="Demo2Mad" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_n7evg")
 
-[node name="Play" type="Button" parent="."]
-offset_left = 1067.0
-offset_top = 6.0
-offset_right = 1137.0
-offset_bottom = 76.0
-theme_override_fonts/font = ExtResource("17_p1ayf")
-theme_override_font_sizes/font_size = 20
-icon = ExtResource("19_n7evg")
-icon_alignment = 1
+[node name="Demo1Mad" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_78xwv")
+volume_db = 5.0
 
 [connection signal="pressed" from="Button1-3" to="." method="_on_button_1_3_pressed"]
 [connection signal="pressed" from="Button1-2" to="." method="_on_button_1_2_pressed"]

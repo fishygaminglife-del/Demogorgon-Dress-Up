@@ -39,9 +39,13 @@ offset_top = 162.0
 offset_right = 734.0
 offset_bottom = 579.0
 theme_override_fonts/font = ExtResource("5_mkchp")
-text = "All assets made by me
+text = "Assets: Made by Fishyyyyyyy (Me)
 
-Credit to google font for Goldman and Electrolize font."
+Font: Google Fonts for Goldman and Electrolize font
+
+Song: DJO - End Of Beginning
+
+Sound Effects: Made by Fishyyyyyyy (Me)"
 horizontal_alignment = 1
 autowrap_mode = 2
 

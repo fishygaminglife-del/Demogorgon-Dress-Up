@@ -39,7 +39,7 @@ offset_top = 161.0
 offset_right = 734.0
 offset_bottom = 578.0
 theme_override_fonts/font = ExtResource("5_r7su1")
-text = "Once you click play, you will enter the game, in the game a demogorgon head will slide over and it is you job to decorate. The demogorgon will have a order in a text bubble and you have to click the right options to dress it as it pleases, if you pick something wrong, you loose a life and you only have 3, through each level get through 5 demogorgons, level 1 has one accessory, level 2 has two accessories, level 3 has three accessories. There is also a set time limit at the top left the game has to be completed in. Good luck!"
+text = "Once you click Play, the game begins and a Demogorgon head will slide onto the screen with an order shown in a text bubble; your job is to choose the correct accessories to match its request. Each wrong choice costs one of your three lives, and each level requires you to successfully complete five Demogorgons. Level 1 uses one accessory, Level 2 uses two, and Level 3 uses three. You must finish everything before the timer in the top-left runs out. Good luck!"
 horizontal_alignment = 1
 autowrap_mode = 2
 

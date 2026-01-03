@@ -14,9 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://7sjhbu78bkty" path="res://images/Text Box.png" id="11_ybwc6"]
 [ext_resource type="FontFile" uid="uid://f04uqx31flkh" path="res://fonts/Electrolize,Goldman/Goldman/Goldman-Bold.ttf" id="12_iyd8c"]
 [ext_resource type="FontFile" uid="uid://d3ip2iqqvfocd" path="res://fonts/Electrolize,Goldman/Electrolize/Electrolize-Regular.ttf" id="13_nn67r"]
-[ext_resource type="Texture2D" uid="uid://cr1yyuloy77x0" path="res://images/Box.png" id="15_wxq22"]
-[ext_resource type="Texture2D" uid="uid://dqgu227ho4y4o" path="res://images/Pause Button.png" id="16_86tbu"]
-[ext_resource type="Texture2D" uid="uid://bws6cxxe1cxx5" path="res://images/Play Button.png" id="17_y266n"]
+[ext_resource type="AudioStream" uid="uid://dse2vhxh4i3w2" path="res://Audiomusic/DemoHappy3.mp3" id="15_wxq22"]
+[ext_resource type="AudioStream" uid="uid://cbsk7tlqs4qn3" path="res://Audiomusic/DemoMad2_1.mp3" id="16_86tbu"]
+[ext_resource type="AudioStream" uid="uid://1j68278tigow" path="res://Audiomusic/DemoMad_1.mp3" id="17_y266n"]
 
 [sub_resource type="Animation" id="Animation_3jqp1"]
 length = 0.001
@@ -513,29 +513,15 @@ theme_override_fonts/font = ExtResource("12_iyd8c")
 theme_override_font_sizes/font_size = 100
 text = "Level 2"
 
-[node name="Box" type="Sprite2D" parent="."]
-position = Vector2(1101, 40)
-texture = ExtResource("15_wxq22")
+[node name="Demo3Happy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_wxq22")
 
-[node name="Pause" type="Button" parent="."]
-offset_left = 1066.0
-offset_top = 5.0
-offset_right = 1136.0
-offset_bottom = 75.0
-theme_override_fonts/font = ExtResource("13_nn67r")
-theme_override_font_sizes/font_size = 20
-icon = ExtResource("16_86tbu")
-icon_alignment = 1
+[node name="Demo2Mad" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_86tbu")
 
-[node name="Play" type="Button" parent="."]
-offset_left = 1066.0
-offset_top = 5.0
-offset_right = 1136.0
-offset_bottom = 75.0
-theme_override_fonts/font = ExtResource("13_nn67r")
-theme_override_font_sizes/font_size = 20
-icon = ExtResource("17_y266n")
-icon_alignment = 1
+[node name="Demo1Mad" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_y266n")
+volume_db = 5.0
 
 [connection signal="pressed" from="Button1-2" to="." method="_on_button_1_2_pressed"]
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]

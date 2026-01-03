@@ -26,9 +26,15 @@ func _on_credit_pressed() -> void:
 
 
 func _on_volume_on_pressed() -> void:
-	pass # Replace with function body.
-
-
+	BgMusic.toggle_music()
+	$VolumeOn.visible = false
+	$VolumeOn.disabled = true
+	$VolumeOff.visible = true
+	$VolumeOff.disabled = false
 
 func _on_volume_off_pressed() -> void:
-	pass # Replace with function body.
+	BgMusic.toggle_music()
+	$VolumeOff.visible = false
+	$VolumeOff.disabled = true
+	$VolumeOn.visible = true
+	$VolumeOn.disabled = false

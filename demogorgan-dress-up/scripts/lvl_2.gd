@@ -49,7 +49,7 @@ func _process(delta):
 func time_up():
 	$Status1.visible = true
 	await get_tree().create_timer(1).timeout
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/HomePage.tscn")
 
 
 func game1_logic():
@@ -77,8 +77,8 @@ func game1_logic():
 	if life == 0:
 		$Status1.visible = true
 		await get_tree().create_timer(1).timeout
-		get_tree().reload_current_scene()
-		pass
+		get_tree().change_scene_to_file("res://scenes/HomePage.tscn")
+		
 		
 func new_demo():
 	$Lives.text = str(int(life))
@@ -170,53 +170,64 @@ func choose_random_order1():
 func _on_button_1_pressed() -> void:
 	$AnimationPlayer/GreenFlowerOn.visible = true
 	if current_order == 0:
+		$Demo3Happy.play()
 		game1_logic()
 		
 	else:
 		life -=1
+		$Demo1Mad.play()
 		game1_logic()
 		
 func _on_button_2_pressed() -> void:
 	$AnimationPlayer/OrangeFlowerOn.visible = true
 	if current_order == 1:
+		$Demo3Happy.play()
 		game1_logic()
 	else:
 		life -=1
+		$Demo1Mad.play()
 		game1_logic()
 		
 func _on_button_3_pressed() -> void:
 	$AnimationPlayer/BlueFlowerOn.visible = true
 	if current_order == 2:
+		$Demo3Happy.play()
 		game1_logic()
 	else:
 		life -=1
+		$Demo2Mad.play()
 		game1_logic()
 
 #set 2 of buttons
 func _on_button_1_2_pressed() -> void:
 	$AnimationPlayer/BlackFlowerHead.visible = true
 	if current_order1 == 0:
+		$Demo3Happy.play()
 		new_demo()
 		
 	else:
 		life -=1
+		$Demo1Mad.play()
 		new_demo()
 
 
 func _on_button_2_2_pressed() -> void:
 	if current_order1 == 1:
+		$Demo3Happy.play()
 		new_demo()
 	
 	else:
 		life -=1
+		$Demo2Mad.play()
 		new_demo()
 
 
 func _on_button_3_2_pressed() -> void:
 	$AnimationPlayer/SilverFlowerHead.visible = true
 	if current_order1 == 2:
+		$Demo3Happy.play()
 		new_demo()
 	else:
 		life -=1
+		$Demo2Mad.play()
 		new_demo()
-		

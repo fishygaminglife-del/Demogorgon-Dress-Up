@@ -43,7 +43,7 @@ func _process(delta):
 func time_up():
 	$Status1.visible = true
 	await get_tree().create_timer(1).timeout
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/HomePage.tscn")
 
 
 func game1_logic():
@@ -64,7 +64,7 @@ func game1_logic():
 		if life == 0:
 			$Status1.visible = true
 			await get_tree().create_timer(1).timeout
-			get_tree().reload_current_scene()
+			get_tree().change_scene_to_file("res://scenes/HomePage.tscn")
 		else:
 			$AnimationPlayer.play("lvl1_outro")
 			await $AnimationPlayer.animation_finished
@@ -109,32 +109,37 @@ func choose_random_order():
 func _on_button_pressed() -> void:
 	$AnimationPlayer/GreenFlowerOn.visible = true
 	if current_order == 0:
-		print("happy")
 		counter +=1
+		$Demo3Happy.play()
 		game1_logic()
 		
 	else:
-		print("sad")
 		counter +=1
 		life -=1
+		$Demo2Mad.play()
 		game1_logic()
 		
 func _on_button_2_pressed() -> void:
 	$AnimationPlayer/OrangeFlowerOn.visible = true
 	if current_order == 1:
 		counter +=1
+		$Demo3Happy.play()
 		game1_logic()
 	else:
 		counter +=1
 		life -=1
+		$Demo1Mad.play()
 		game1_logic()
 		
 func _on_button_3_pressed() -> void:
 	$AnimationPlayer/BlueFlowerOn.visible = true
 	if current_order == 2:
 		counter +=1
+		$Demo3Happy.play()
 		game1_logic()
 	else:
 		counter +=1
 		life -=1
+		$Demo2Mad.play()
 		game1_logic()
+		
