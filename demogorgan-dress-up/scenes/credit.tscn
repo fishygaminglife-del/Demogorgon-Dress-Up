@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq34jqoo5nnba"]
+
+[ext_resource type="Script" uid="uid://cuja4ea2n6h2k" path="res://scripts/credit.gd" id="1_32mfc"]
+[ext_resource type="Texture2D" uid="uid://d4iguhb87ardw" path="res://images/ExtraPg.png" id="1_kmqx5"]
+[ext_resource type="FontFile" uid="uid://f04uqx31flkh" path="res://fonts/Electrolize,Goldman/Goldman/Goldman-Bold.ttf" id="3_mkchp"]
+[ext_resource type="Texture2D" uid="uid://6tikppi4yq7d" path="res://images/Home.png" id="4_y6cwi"]
+[ext_resource type="FontFile" uid="uid://d3ip2iqqvfocd" path="res://fonts/Electrolize,Goldman/Electrolize/Electrolize-Regular.ttf" id="5_mkchp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_32mfc")
+
+[node name="ExtraPg" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_kmqx5")
+
+[node name="Credit" type="Label" parent="."]
+offset_left = 491.0
+offset_top = 16.0
+offset_right = 664.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("3_mkchp")
+theme_override_font_sizes/font_size = 40
+text = "CREDIT"
+
+[node name="HomePg" type="Button" parent="."]
+offset_left = 1010.0
+offset_top = 11.0
+offset_right = 1115.0
+offset_bottom = 116.0
+
+[node name="Home" type="Sprite2D" parent="."]
+position = Vector2(1063.1544, 62.875)
+scale = Vector2(0.48184353, 0.48184353)
+texture = ExtResource("4_y6cwi")
+
+[node name="Instructions1" type="Label" parent="."]
+offset_left = 416.0
+offset_top = 162.0
+offset_right = 734.0
+offset_bottom = 579.0
+theme_override_fonts/font = ExtResource("5_mkchp")
+text = "All assets made by me
+
+Credit to google font for Goldman and Electrolize font."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="HomePg" to="." method="_on_home_pg_pressed"]

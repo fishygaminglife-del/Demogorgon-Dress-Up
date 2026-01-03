@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://d2b33gk8skdjt"]
+[gd_scene load_steps=22 format=3 uid="uid://d2b33gk8skdjt"]
 
-[ext_resource type="Script" uid="uid://duvr5r42qocf2" path="res://scenes/lvl_2.gd" id="1_8yxcp"]
+[ext_resource type="Script" uid="uid://duvr5r42qocf2" path="res://scripts/lvl_2.gd" id="1_8yxcp"]
 [ext_resource type="Texture2D" uid="uid://dqghthv86nv2d" path="res://images/Full Setup 1.png" id="1_yxjv1"]
 [ext_resource type="Texture2D" uid="uid://c7srnumwo8kuc" path="res://images/Base Head.png" id="2_kpy5e"]
 [ext_resource type="Texture2D" uid="uid://dcgqorvysrcsv" path="res://images/Black Flower Head.png" id="3_8yxcp"]
@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://7sjhbu78bkty" path="res://images/Text Box.png" id="11_ybwc6"]
 [ext_resource type="FontFile" uid="uid://f04uqx31flkh" path="res://fonts/Electrolize,Goldman/Goldman/Goldman-Bold.ttf" id="12_iyd8c"]
 [ext_resource type="FontFile" uid="uid://d3ip2iqqvfocd" path="res://fonts/Electrolize,Goldman/Electrolize/Electrolize-Regular.ttf" id="13_nn67r"]
+[ext_resource type="Texture2D" uid="uid://cr1yyuloy77x0" path="res://images/Box.png" id="15_wxq22"]
+[ext_resource type="Texture2D" uid="uid://dqgu227ho4y4o" path="res://images/Pause Button.png" id="16_86tbu"]
+[ext_resource type="Texture2D" uid="uid://bws6cxxe1cxx5" path="res://images/Play Button.png" id="17_y266n"]
 
 [sub_resource type="Animation" id="Animation_3jqp1"]
 length = 0.001
@@ -509,6 +512,30 @@ theme_override_colors/font_color = Color(0.5137255, 0.09019608, 0.09019608, 1)
 theme_override_fonts/font = ExtResource("12_iyd8c")
 theme_override_font_sizes/font_size = 100
 text = "Level 2"
+
+[node name="Box" type="Sprite2D" parent="."]
+position = Vector2(1101, 40)
+texture = ExtResource("15_wxq22")
+
+[node name="Pause" type="Button" parent="."]
+offset_left = 1066.0
+offset_top = 5.0
+offset_right = 1136.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("13_nn67r")
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("16_86tbu")
+icon_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+offset_left = 1066.0
+offset_top = 5.0
+offset_right = 1136.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("13_nn67r")
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("17_y266n")
+icon_alignment = 1
 
 [connection signal="pressed" from="Button1-2" to="." method="_on_button_1_2_pressed"]
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]

@@ -1,3 +1,110 @@
-[gd_scene format=3 uid="uid://dj5e1p6klfxyy"]
+[gd_scene load_steps=11 format=3 uid="uid://dj5e1p6klfxyy"]
+
+[ext_resource type="Script" uid="uid://bn5nu7u113xc3" path="res://scripts/home_page.gd" id="1_2dkbu"]
+[ext_resource type="Texture2D" uid="uid://cvw0w3gmyorac" path="res://images/HomePage.png" id="2_y3am7"]
+[ext_resource type="Texture2D" uid="uid://b64vnex3d3wls" path="res://images/Red Bow.png" id="3_kumod"]
+[ext_resource type="Texture2D" uid="uid://cltmx5137m8v7" path="res://images/Red FLower.png" id="4_ayvbj"]
+[ext_resource type="Texture2D" uid="uid://dqgu227ho4y4o" path="res://images/Pause Button.png" id="5_yupm6"]
+[ext_resource type="Texture2D" uid="uid://bws6cxxe1cxx5" path="res://images/Play Button.png" id="6_6n5m7"]
+[ext_resource type="FontFile" uid="uid://d3ip2iqqvfocd" path="res://fonts/Electrolize,Goldman/Electrolize/Electrolize-Regular.ttf" id="6_kumod"]
+[ext_resource type="Texture2D" uid="uid://dsqe5oiidk7kn" path="res://images/VolumeOff.png" id="7_e4k2h"]
+[ext_resource type="Texture2D" uid="uid://pg62h7lyib05" path="res://images/VolumeOn.png" id="8_hegfu"]
+[ext_resource type="FontFile" uid="uid://f04uqx31flkh" path="res://fonts/Electrolize,Goldman/Goldman/Goldman-Bold.ttf" id="9_onxjv"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_2dkbu")
+
+[node name="HomePage" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_y3am7")
+
+[node name="RedBow" type="Sprite2D" parent="."]
+position = Vector2(966.00006, 379)
+scale = Vector2(0.86173826, 0.8617382)
+texture = ExtResource("3_kumod")
+
+[node name="RedFLower" type="Sprite2D" parent="."]
+position = Vector2(217, 368)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("4_ayvbj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 371.0
+offset_top = 15.0
+offset_right = 871.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("9_onxjv")
+theme_override_font_sizes/font_size = 40
+text = "Demogorgon Dress Up"
+horizontal_alignment = 1
+
+[node name="Play2" type="Button" parent="."]
+offset_left = 476.0
+offset_top = 247.0
+offset_right = 738.0
+offset_bottom = 313.0
+theme_override_fonts/font = ExtResource("6_kumod")
+theme_override_font_sizes/font_size = 20
+text = "PLAY"
+
+[node name="Instruction" type="Button" parent="."]
+offset_left = 476.0
+offset_top = 339.0
+offset_right = 738.0
+offset_bottom = 405.0
+theme_override_fonts/font = ExtResource("6_kumod")
+theme_override_font_sizes/font_size = 20
+text = "INSTRUCTIONS"
+
+[node name="Credit" type="Button" parent="."]
+offset_left = 476.0
+offset_top = 432.0
+offset_right = 738.0
+offset_bottom = 498.0
+theme_override_fonts/font = ExtResource("6_kumod")
+theme_override_font_sizes/font_size = 20
+text = "CREDIT"
+
+[node name="VolumeOn" type="Button" parent="."]
+offset_left = 930.0
+offset_top = 11.0
+offset_right = 1000.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("6_kumod")
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("8_hegfu")
+
+[node name="VolumeOff" type="Button" parent="."]
+offset_left = 930.0
+offset_top = 11.0
+offset_right = 1000.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("6_kumod")
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("7_e4k2h")
+
+[node name="Pause" type="Button" parent="."]
+offset_left = 1045.0
+offset_top = 10.0
+offset_right = 1115.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("6_kumod")
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("5_yupm6")
+icon_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+offset_left = 1045.0
+offset_top = 11.0
+offset_right = 1115.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("6_kumod")
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("6_6n5m7")
+icon_alignment = 1
+
+[connection signal="pressed" from="Play2" to="." method="_on_play_2_pressed"]
+[connection signal="pressed" from="Instruction" to="." method="_on_instruction_pressed"]
+[connection signal="pressed" from="Credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="VolumeOn" to="." method="_on_volume_on_pressed"]
+[connection signal="pressed" from="VolumeOff" to="." method="_on_volume_off_pressed"]
