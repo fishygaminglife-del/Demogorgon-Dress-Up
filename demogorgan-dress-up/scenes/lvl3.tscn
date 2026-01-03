@@ -1,3 +1,599 @@
-[gd_scene format=3 uid="uid://u8uw3h3ypnv4"]
+[gd_scene load_steps=22 format=3 uid="uid://u8uw3h3ypnv4"]
+
+[ext_resource type="Script" uid="uid://bw16crantbi8f" path="res://scenes/lvl_3.gd" id="1_1gwi5"]
+[ext_resource type="Texture2D" uid="uid://dqghthv86nv2d" path="res://images/Full Setup 1.png" id="2_gh2lp"]
+[ext_resource type="Texture2D" uid="uid://c7srnumwo8kuc" path="res://images/Base Head.png" id="3_sjffr"]
+[ext_resource type="Texture2D" uid="uid://dcgqorvysrcsv" path="res://images/Black Flower Head.png" id="4_egiqg"]
+[ext_resource type="Texture2D" uid="uid://bl11740xrepgj" path="res://images/Silver Flower Head.png" id="5_n7evg"]
+[ext_resource type="Texture2D" uid="uid://bced7ybii85re" path="res://images/Blue Flower.png" id="6_78xwv"]
+[ext_resource type="Texture2D" uid="uid://jfv1uvsisgaw" path="res://images/Green Flower.png" id="7_y8ivm"]
+[ext_resource type="Texture2D" uid="uid://bhfi3ppqo2ute" path="res://images/Orange Flower.png" id="8_dgoie"]
+[ext_resource type="Texture2D" uid="uid://dekidkwelhu8w" path="res://images/Green Bow.png" id="9_rcbo5"]
+[ext_resource type="Texture2D" uid="uid://cmi40qid1udl5" path="res://images/Orange Bow.png" id="10_4lkks"]
+[ext_resource type="Texture2D" uid="uid://c51rnsi5olog0" path="res://images/Blue Bow.png" id="11_37e8l"]
+[ext_resource type="Texture2D" uid="uid://clxtys0ut7b54" path="res://images/Black Petal.png" id="12_oqx1x"]
+[ext_resource type="Texture2D" uid="uid://drg1f8o4y7p5u" path="res://images/Regular Flower Petal.png" id="13_hq0in"]
+[ext_resource type="Texture2D" uid="uid://bwe6iblymo2m4" path="res://images/Silver Petal.png" id="14_cqjoq"]
+[ext_resource type="Texture2D" uid="uid://7sjhbu78bkty" path="res://images/Text Box.png" id="15_lqph3"]
+[ext_resource type="FontFile" uid="uid://f04uqx31flkh" path="res://fonts/Electrolize,Goldman/Goldman/Goldman-Bold.ttf" id="16_xvo1i"]
+[ext_resource type="FontFile" uid="uid://d3ip2iqqvfocd" path="res://fonts/Electrolize,Goldman/Electrolize/Electrolize-Regular.ttf" id="17_p1ayf"]
+
+[sub_resource type="Animation" id="Animation_krs0w"]
+resource_name = "lvl3_intro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/BaseHead:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1276, 373), Vector2(572, 373)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/BlackFlowerHead:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1276, 373), Vector2(572, 373)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/SilverFlowerHead:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1275.9999, 373), Vector2(572, 373)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/BlueFlowerOn:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1274.9999, 376), Vector2(571.00006, 376.00003)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/GreenFlowerOn:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1274.9999, 376), Vector2(571, 376)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/OrangeFlowerOn:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1275, 376), Vector2(571, 376)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/GreenBowOn:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1300, 321), Vector2(596, 321)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/OrangeBowOn:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1300, 321), Vector2(596, 321)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/BlueBowOn:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1300, 321), Vector2(596, 321)]
+}
+
+[sub_resource type="Animation" id="Animation_ysayj"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_1gwi5"]
+resource_name = "lvl3_outro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/BaseHead:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(572, 373), Vector2(-124.000015, 373)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/BlackFlowerHead:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(572, 373), Vector2(-124.000015, 373)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/SilverFlowerHead:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(572, 373), Vector2(-123.99997, 373)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/BlueFlowerOn:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571.00006, 376.00003), Vector2(-124.99991, 376)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/GreenFlowerOn:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571, 376), Vector2(-124.99997, 376)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/OrangeFlowerOn:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571, 376), Vector2(-125.000015, 376)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/GreenBowOn:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(596, 321), Vector2(-100.000015, 321)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/OrangeBowOn:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(596, 321), Vector2(-100.000015, 321)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/BlueBowOn:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(596, 321), Vector2(-100.000015, 321)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nnb7g"]
+_data = {
+&"RESET": SubResource("Animation_ysayj"),
+&"lvl3_intro": SubResource("Animation_krs0w"),
+&"lvl3_outro": SubResource("Animation_1gwi5")
+}
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_1gwi5")
+
+[node name="FullSetup1" type="Sprite2D" parent="."]
+position = Vector2(576, 324.00003)
+scale = Vector2(0.9, 0.90000004)
+texture = ExtResource("2_gh2lp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nnb7g")
+}
+
+[node name="BaseHead" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(572, 373)
+scale = Vector2(0.425532, 0.42553198)
+texture = ExtResource("3_sjffr")
+
+[node name="BlackFlowerHead" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(572, 373)
+scale = Vector2(0.42442372, 0.42442375)
+texture = ExtResource("4_egiqg")
+
+[node name="SilverFlowerHead" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(572, 373)
+scale = Vector2(0.424, 0.424)
+texture = ExtResource("5_n7evg")
+
+[node name="BlueFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(571.00006, 376.00003)
+scale = Vector2(0.427, 0.427)
+texture = ExtResource("6_78xwv")
+
+[node name="GreenFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(571, 376)
+scale = Vector2(0.427, 0.427)
+texture = ExtResource("7_y8ivm")
+
+[node name="OrangeFlowerOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(571, 376)
+scale = Vector2(0.42664224, 0.42664215)
+texture = ExtResource("8_dgoie")
+
+[node name="GreenBowOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(596, 321)
+scale = Vector2(0.373, 0.373)
+texture = ExtResource("9_rcbo5")
+
+[node name="OrangeBowOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(596, 321)
+scale = Vector2(0.373, 0.373)
+texture = ExtResource("10_4lkks")
+
+[node name="BlueBowOn" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
+position = Vector2(596, 321)
+scale = Vector2(0.37288383, 0.37288374)
+texture = ExtResource("11_37e8l")
+
+[node name="Button1-3" type="Button" parent="."]
+offset_left = 150.0
+offset_top = 34.0
+offset_right = 307.0
+offset_bottom = 179.0
+
+[node name="Button1-2" type="Button" parent="."]
+offset_left = 151.0
+offset_top = 33.0
+offset_right = 307.0
+offset_bottom = 178.0
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 150.0
+offset_top = 34.0
+offset_right = 306.0
+offset_bottom = 179.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2-3" type="Button" parent="."]
+offset_left = 493.0
+offset_top = 34.0
+offset_right = 650.0
+offset_bottom = 179.0
+
+[node name="Button2-2" type="Button" parent="."]
+offset_left = 494.0
+offset_top = 33.0
+offset_right = 650.0
+offset_bottom = 178.0
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 493.0
+offset_top = 34.0
+offset_right = 649.0
+offset_bottom = 179.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3-3" type="Button" parent="."]
+offset_left = 863.0
+offset_top = 33.0
+offset_right = 1020.0
+offset_bottom = 178.0
+
+[node name="Button3-2" type="Button" parent="."]
+offset_left = 863.0
+offset_top = 33.0
+offset_right = 1019.0
+offset_bottom = 178.0
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 863.0
+offset_top = 33.0
+offset_right = 1019.0
+offset_bottom = 178.0
+metadata/_edit_use_anchors_ = true
+
+[node name="GreenFlowerBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(230.99998, 104.99999)
+scale = Vector2(0.3884615, 0.3884615)
+texture = ExtResource("7_y8ivm")
+
+[node name="BlueFlowerBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(942, 108)
+scale = Vector2(0.388, 0.388)
+texture = ExtResource("6_78xwv")
+
+[node name="OrangeFlowerBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(574, 105)
+scale = Vector2(0.388, 0.388)
+texture = ExtResource("8_dgoie")
+
+[node name="BlackPetalBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(228, 104.99997)
+scale = Vector2(0.572, 0.572)
+texture = ExtResource("12_oqx1x")
+
+[node name="RegularFlowerPetalBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(575, 102.99994)
+scale = Vector2(0.572, 0.572)
+texture = ExtResource("13_hq0in")
+
+[node name="SilverPetalBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(942.00006, 102.99999)
+scale = Vector2(0.572, 0.572)
+texture = ExtResource("14_cqjoq")
+
+[node name="GreenBowBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(572, 106)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("9_rcbo5")
+
+[node name="OrangeBowBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(942, 106)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("10_4lkks")
+
+[node name="BlueBowBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(228, 106)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("11_37e8l")
+
+[node name="TextBox" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(749, 251)
+scale = Vector2(0.4552981, 0.45529804)
+texture = ExtResource("15_lqph3")
+
+[node name="GreenFlowerText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(711, 245)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("7_y8ivm")
+
+[node name="BlueFlowerText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(711, 245)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("6_78xwv")
+
+[node name="OrangeFlowerText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(711, 245)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("8_dgoie")
+
+[node name="BlackPetalText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(810, 245)
+scale = Vector2(0.441, 0.441)
+texture = ExtResource("12_oqx1x")
+
+[node name="RegularFlowerPetalText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(810, 245)
+scale = Vector2(0.441, 0.441)
+texture = ExtResource("13_hq0in")
+
+[node name="SilverPetalText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(810, 245)
+scale = Vector2(0.44092473, 0.44092473)
+texture = ExtResource("14_cqjoq")
+
+[node name="GreenBowText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(730.00006, 209.00002)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("9_rcbo5")
+
+[node name="OrangeBowText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(730, 209)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("10_4lkks")
+
+[node name="BlueBowText" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(730, 209)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("11_37e8l")
+
+[node name="Status1" type="Label" parent="."]
+visible = false
+offset_left = 457.0
+offset_top = 213.00002
+offset_right = 687.0
+offset_bottom = 271.0
+rotation = -0.19896753
+theme_override_colors/font_color = Color(0.90576994, 0, 0.22666997, 1)
+theme_override_font_sizes/font_size = 40
+text = "GAME OVER"
+metadata/_edit_use_anchors_ = true
+
+[node name="Lives" type="Label" parent="."]
+offset_left = 967.0
+offset_top = 560.0
+offset_right = 981.0
+offset_bottom = 589.0
+theme_override_font_sizes/font_size = 20
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Lives2" type="Label" parent="."]
+offset_left = 884.0
+offset_top = 562.0
+offset_right = 952.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("16_xvo1i")
+theme_override_font_sizes/font_size = 20
+text = "Lives:"
+metadata/_edit_use_anchors_ = true
+
+[node name="DemoLeft" type="Label" parent="."]
+offset_left = 293.0
+offset_top = 560.0
+offset_right = 333.0
+offset_bottom = 588.0
+theme_override_font_sizes/font_size = 20
+text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="DemoLeft2" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 562.0
+offset_right = 287.0
+offset_bottom = 586.0
+theme_override_fonts/font = ExtResource("16_xvo1i")
+theme_override_font_sizes/font_size = 20
+text = "Demogorgons Left:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Hawkins" type="Label" parent="."]
+offset_left = 468.0
+offset_top = 556.0
+offset_right = 680.0
+offset_bottom = 595.0
+theme_override_fonts/font = ExtResource("16_xvo1i")
+theme_override_font_sizes/font_size = 32
+text = "THE ABYSS"
+
+[node name="lvl3" type="Label" parent="."]
+offset_left = 506.0
+offset_top = 493.0
+offset_right = 643.0
+offset_bottom = 541.0
+theme_override_fonts/font = ExtResource("17_p1ayf")
+theme_override_font_sizes/font_size = 40
+text = "Level 3"
+horizontal_alignment = 1
+
+[node name="Timer" type="Label" parent="."]
+offset_left = 96.0
+offset_top = -1.0
+offset_right = 115.0
+offset_bottom = 22.0
+text = "40"
+
+[node name="Time" type="Label" parent="."]
+offset_left = 4.0
+offset_right = 94.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("16_xvo1i")
+text = "Time Left:"
+
+[node name="Lvl_stat" type="Label" parent="."]
+offset_left = 407.0
+offset_top = 194.0
+offset_right = 798.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0.5137255, 0.09019608, 0.09019608, 1)
+theme_override_fonts/font = ExtResource("16_xvo1i")
+theme_override_font_sizes/font_size = 100
+text = "Level 3"
+
+[connection signal="pressed" from="Button1-3" to="." method="_on_button_1_3_pressed"]
+[connection signal="pressed" from="Button1-2" to="." method="_on_button_1_2_pressed"]
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2-3" to="." method="_on_button_2_3_pressed"]
+[connection signal="pressed" from="Button2-2" to="." method="_on_button_2_2_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3-3" to="." method="_on_button_3_3_pressed"]
+[connection signal="pressed" from="Button3-2" to="." method="_on_button_3_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

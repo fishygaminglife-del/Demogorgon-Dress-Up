@@ -267,9 +267,9 @@ text = "Demogorgons Left:"
 metadata/_edit_use_anchors_ = true
 
 [node name="Hawkins" type="Label" parent="."]
-offset_left = 499.0
+offset_left = 485.0
 offset_top = 559.0
-offset_right = 655.0
+offset_right = 666.0
 offset_bottom = 598.0
 theme_override_fonts/font = ExtResource("8_mvjca")
 theme_override_font_sizes/font_size = 32
@@ -290,7 +290,7 @@ offset_left = 96.0
 offset_top = -1.0
 offset_right = 115.0
 offset_bottom = 22.0
-text = "60"
+text = "30"
 
 [node name="Time" type="Label" parent="."]
 offset_left = 4.0
@@ -298,6 +298,16 @@ offset_right = 94.0
 offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("8_mvjca")
 text = "Time Left:"
+
+[node name="Lvl_stat" type="Label" parent="."]
+offset_left = 399.0
+offset_top = 194.0
+offset_right = 764.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0.5137255, 0.09019608, 0.09019608, 1)
+theme_override_fonts/font = ExtResource("8_mvjca")
+theme_override_font_sizes/font_size = 100
+text = "Level 1"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

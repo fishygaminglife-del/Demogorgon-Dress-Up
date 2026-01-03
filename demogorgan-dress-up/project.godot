@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="demogorgan dress up"
-run/main_scene="uid://dx7g5kvtirkn"
+run/main_scene="uid://dj5e1p6klfxyy"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

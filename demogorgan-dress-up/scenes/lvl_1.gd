@@ -4,7 +4,7 @@ var counter = 0
 var current_order = -1
 var life = 3
 var num = 4
-var time_left =  40
+var time_left =  30
 var timer_running = true
 
 
@@ -20,6 +20,9 @@ func _ready() -> void:
 	$Button.disabled = true
 	$Button2.disabled = true
 	$Button3.disabled = true
+	$Lvl_stat.visible = true
+	await get_tree().create_timer(1).timeout
+	$Lvl_stat.visible = false
 	$AnimationPlayer.play("lvl1_intro")
 	await $AnimationPlayer.animation_finished
 	$Button.disabled = false
@@ -28,6 +31,7 @@ func _ready() -> void:
 	choose_random_order()
 	
 func _process(delta):
+	await get_tree().create_timer(1).timeout
 	if timer_running:
 		time_left -= delta
 		if time_left <= 0:
@@ -118,11 +122,9 @@ func _on_button_pressed() -> void:
 func _on_button_2_pressed() -> void:
 	$AnimationPlayer/OrangeFlowerOn.visible = true
 	if current_order == 1:
-		print("happy")
 		counter +=1
 		game1_logic()
 	else:
-		print("sad")
 		counter +=1
 		life -=1
 		game1_logic()
@@ -130,11 +132,9 @@ func _on_button_2_pressed() -> void:
 func _on_button_3_pressed() -> void:
 	$AnimationPlayer/BlueFlowerOn.visible = true
 	if current_order == 2:
-		print("happy")
 		counter +=1
 		game1_logic()
 	else:
-		print("sad")
 		counter +=1
 		life -=1
 		game1_logic()
